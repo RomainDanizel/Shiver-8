@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style/style.scss" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body class="background">
+    <div class="btn" onclick="openFullscreen();"></div>
+    <div class="video">
+      <video
+        width="100%"
+        class="video__player"
+        ontimeupdate="update(this)"
+        src="../assets/video/.mp4"
+      ></video>
+      <div class="video__controller">
+        <button class="video__controller--back">-10s</button>
+        <button class="video__controller--volumedown">-</button>
+        <button class="video__controller--play">Play/Pause</button>
+        <button class="video__controller--volumeup">+</button>
+        <button class="video__controller--front">+10s</button>
+        <div class="video__controller--progressbar">Appuyez sur play</div>
+      </div>
+    </div>
+    <script>
+      const elem = document.querySelector(".video__player");
+      function openFullscreen() {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        }
+      }
+    </script>
+    <script src="../script/script.js"></script>
+  </body>
+</html>
