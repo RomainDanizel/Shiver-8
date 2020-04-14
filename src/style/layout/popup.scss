@@ -1,0 +1,80 @@
+.popup {
+  position: absolute;
+  background-color: $secondarycolor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
+
+  &.is-open {
+    display: none;
+  }
+
+  &--film {
+    width: 100%;
+    background-image: url("../assets/tool/memories-of-murder-banner.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+
+    &--topandbot {
+      width: 100%;
+      color: $textcolor;
+      font-family: Poppins;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+    }
+  }
+
+  &--description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    height: 40%;
+    color: $textcolor;
+
+    &--top {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      width: 100%;
+
+      &--text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      &--options {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
+
+    &--resume {
+      text-align: center;
+    }
+
+    &--actors {
+      display: grid;
+      grid-template: 5fr 2fr 1fr / repeat(6, 1fr);
+      justify-items: center;
+      align-items: center;
+
+      h1 {
+        color: grey;
+      }
+    }
+  }
+}
