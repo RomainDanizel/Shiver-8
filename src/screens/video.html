@@ -7,31 +7,52 @@
     <title>Document</title>
   </head>
   <body class="background">
-    <div class="btn" onclick="openFullscreen();"></div>
     <div class="video">
+      <div class="btn" onclick="openFullscreen();"><img src="../assets/tool/play.png"></img></div>
+      
+      <a href="../index.html"><img class="leave" src="../assets/tool/close.svg"></img></a>
       <video
-        width="100%"
         class="video__player"
+        src="../assets/video/penta.mp4"
         ontimeupdate="update(this)"
-        src="../assets/video/.mp4"
       ></video>
-      <div class="video__controller">
-        <button class="video__controller--back">-10s</button>
-        <button class="video__controller--volumedown">-</button>
-        <button class="video__controller--play">Play/Pause</button>
-        <button class="video__controller--volumeup">+</button>
-        <button class="video__controller--front">+10s</button>
-        <div class="video__controller--progressbar">Appuyez sur play</div>
+        <div class="video__controller">
+          <div class="video__time">
+            <span class="video__time--actual">0:00</span>
+            <span class="video__time--separate"> / </span>
+            <span class="video__time--finish">0:00</span>
+          </div>
+          <div class="video__progress">
+            <input type="range" min="1" max="100" value="1" class="video__progress--bar"></input>
+          </div>
+          <img class="video__controller--play" src="../assets/tool/play.svg"></img>
+          <img class="video__controller--back" src="../assets/tool/back.svg"></img>
+          <img class="video__controller--front" src="../assets/tool/front.svg"></img>
+          <img class="video__controller--volumedown" src="../assets/tool/sound.svg"></img>
+          <img class="video__controller--volumeup" src="../assets/tool/sound.svg"></img>
+          <img class="video__controller--subtitle" src="../assets/tool/subtitle.svg"></img>
+          <span class="video__quality">HD</span>
+          <div class="btn__close" onclick="closeFullscreen();"><img src="../assets/tool/screen.svg"></img></div>
+        </div>
       </div>
-    </div>
     <script>
-      const elem = document.querySelector(".video__player");
       function openFullscreen() {
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-        }
+        var element = document.querySelector(".video");
+        element.classList.add("full-screen");
       }
-    </script>
+      function closeFullscreen() {
+        var close = document.querySelector(".video");
+        close.classList.remove("full-screen")
+      }
+      function update(video) {
+        const duration = video.duration;
+        const time = video.currentTime;
+        const fraction = time / duration;
+        const percent = Math.ceil(fraction * 100);
+        const progress = document.querySelector(".video__progress--bar");
+        progress.style.width = percent + "%";
+      } 
+   </script>
     <script src="../script/script.js"></script>
   </body>
 </html>
