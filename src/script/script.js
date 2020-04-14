@@ -44,13 +44,3 @@ back.addEventListener("click", function () {
     video.currentTime -= 10;
   }
 });
-
-function update(video) {
-  const duration = video.duration;
-  const time = video.currentTime;
-  const fraction = time / duration;
-  const percent = Math.ceil(fraction * 100);
-  const progress = document.querySelector(".video__controller--progressbar");
-  progress.style.width = percent + "%";
-  progress.textContent = percent + "%";
-}
