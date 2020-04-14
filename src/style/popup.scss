@@ -1,7 +1,3 @@
-.poster {
-  background-color: red;
-}
-
 .popup {
   position: absolute;
   background-color: $secondarycolor;
@@ -13,8 +9,9 @@
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
 
-  &.is-open{
+  &.is-open {
     display: none;
   }
 
