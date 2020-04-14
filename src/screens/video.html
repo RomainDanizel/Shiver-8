@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -23,19 +22,39 @@
             <span class="video__time--finish">0:00</span>
           </div>
           <div class="video__progress">
-            <input type="range" min="1" max="100" value="1" class="video__progress--bar"></input>
+            <input type="range" min="0" max="100" value="0" class="video__progress--bar"></input>
           </div>
           <img class="video__controller--play" src="../assets/tool/play.svg"></img>
           <img class="video__controller--back" src="../assets/tool/back.svg"></img>
           <img class="video__controller--front" src="../assets/tool/front.svg"></img>
-          <img class="video__controller--volumedown" src="../assets/tool/sound.svg"></img>
-          <img class="video__controller--volumeup" src="../assets/tool/sound.svg"></img>
+          <input type="range" min="0" max="100" value="50" class="video__progress--sound"></input>
+          <button class="video__controller--mute" onclick="mute();">
+            <img  src="../assets/tool/sound.svg"></img>
+          </button>
           <img class="video__controller--subtitle" src="../assets/tool/subtitle.svg"></img>
           <span class="video__quality">HD</span>
           <div class="btn__close" onclick="closeFullscreen();"><img src="../assets/tool/screen.svg"></img></div>
         </div>
       </div>
     <script>
+      const video = document.querySelector(".video__player");
+      const progress = document.querySelector(".video__progress--bar");
+      const volume = document.querySelector(".video__progress--sound");
+      var sound = 0;
+      volume.addEventListener("input", function(){
+        video.volume = volume.value / 100;
+      }); 
+      function mute() {
+        console.log('yes');
+        if (volume.value != 0){
+          sound = volume.value;
+          video.volume = 0;
+          volume.value = 0;
+        } else {
+          video.volume = sound / 100;
+          volume.value = sound;
+        }
+      }
       function openFullscreen() {
         var element = document.querySelector(".video");
         element.classList.add("full-screen");
@@ -49,8 +68,8 @@
         const time = video.currentTime;
         const fraction = time / duration;
         const percent = Math.ceil(fraction * 100);
-        const progress = document.querySelector(".video__progress--bar");
         progress.style.width = percent + "%";
+        progress.value = percent;
       } 
    </script>
     <script src="../script/script.js"></script>
