@@ -1,0 +1,139 @@
+body {
+  background: linear-gradient(179.06deg, #000000 19.36%, rgba(15, 14, 16, 0.95) 44.39%);
+  .header {
+    position:fixed;
+    margin-left:64px;
+    z-index:1;
+    width:100vw;
+    display:flex;
+    justify-content: space-between;
+    .header__lists{
+      display:flex;
+      flex-direction: row;
+      margin-left:136px;
+      font-size:24px;
+      font-family:Poppins;
+      font-weight: 300;
+      a {
+      text-decoration:none;
+      align-self:center;
+      color: #E5E5E5;
+      cursor: pointer;
+      }
+      a{
+        margin-left:56px;
+      }
+      a:first-child{
+        margin-left:11px;
+      }
+      a:first-child::before {
+        content:"";
+        position: absolute;
+        width: 3%;
+        height: 20%;
+        bottom:25%;
+        left: 31%;
+        border: 1px solid #E94242;
+        border-top-color: transparent;
+        border-right-color:transparent;
+      }
+    }
+    .header__search {
+      margin-left: 231px;
+      width:256px;
+      height: 32px;
+      display:flex;
+      flex-direction: row;
+      align-self: center;
+      justify-content: flex-end;
+      transition:all 0.5s;
+      .search__bar {
+        display:none;
+      }
+      .search__logo{ 
+        object-fit: contain;
+        margin-left:231;
+      }
+    }
+    .header__search.is-open {
+      background-color:rgba(145, 145, 145, 0.15);
+      border-radius:20px;
+      .search__bar {
+        display:flex;
+        width:90%;
+        background-color:rgba(145, 145, 145, 0.1);
+        border:transparent;
+        border-radius:20px;
+      }
+    }
+    .header__login {
+      object-fit:contain;
+      display:block;
+    }
+  }
+  .banner {
+    z-index: -1;
+    width:100vw;
+  }
+  .must-watch {
+    position:absolute;
+    margin-top:521px;
+    width: 100vw;
+    .must-watch__info {
+      display:flex; 
+      flex-direction:row;
+      margin-left: 151px;
+      .info__title{
+        color: #F7F7F7;
+        font-size:32px;
+        font-family: Poppins;
+        font-weight: 500;
+      }
+      .info__link{
+        margin-left:18px;
+        align-self: flex-end;
+        color: #D73F3F;
+        font-size: 16px;
+        font-family: Poppins;
+        font-weight: 300;
+      }
+    }
+    .must-watch__arrows {
+      position:relative;
+      bottom:21vh;
+      width:90vw;
+      .left-arrow {
+        transition:all 0.3s
+      }
+      .right-arrow {
+        position: relative;
+        left:100%;
+        transform: rotate(-180deg);
+      }
+      .left-arrow:hover {
+        background-color:black;
+        opacity:0.3;
+        height:100%;
+      }
+      .right-arrow:hover {
+        background-color:black;
+        opacity:0.3;
+        height:100%;
+      }
+    }
+      
+    .must-watch__posters {
+      margin-top:59px;
+      display:flex;
+      flex-direction:row;
+      .posters {
+        width:100vw;
+        .poster {
+          margin-left:44px;
+          cursor:pointer;
+        }
+
+      }
+    }
+  }
+}
