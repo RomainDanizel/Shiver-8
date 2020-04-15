@@ -10,7 +10,7 @@
     "sass": "^1.26.3"
   },
   "scripts": {
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/screens/home.html"
   },
   "repository": {
     "type": "git",
