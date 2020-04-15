@@ -71,7 +71,7 @@
         <input class ="search__bar" type="text" name="search" id="search" placeholder="movie name">
         <img class ="search__logo" src="assets/tool/search.png" alt="logo">
       </div>
-      <a href="home.html"><img class ="header__login" src="assets/tool/login.png" alt="login account"></a>
+      <a href="index.html"><img class ="header__login" src="assets/tool/login.png" alt="login account"></a>
     </div>
     <div></div>
     
@@ -95,7 +95,7 @@
       <img src="assets/poster/gremlin.png" alt="Gremlin poster" class="poster">
     </div>
     <div class="group-two posters__group">
-      <img src="assets/poster/the-conjuring.png" alt="The conjuring poster" class="poster">
+      <img src="assets/poster/beetlejuice.png" alt="The conjuring poster" class="poster">
       <img src="assets/poster/seven.png" alt="Seven poster" class="poster">
       <img src="assets/poster/the-shining.png" alt="The shining poster" class="poster">
       <img src="assets/poster/memories-of-murder.png" alt="Memories of murder poster" class="poster">
@@ -142,11 +142,16 @@
   </div>
 </section>
   <img class="banner" src="assets/tool/seven-banner.png">
+  <footer>
+    <img src="assets/tool/footer.png" class="footer">
+  </footer>
   <script>
     const searchLogo = document.querySelector('.search__logo')
     const searchBar = document.querySelector('.search__bar')
     const arrows = document.querySelectorAll('.arrow')
-    const groups = document.querySelectorAll('.group')
+    const mustWatch = document.querySelector('.must-watch__posters')
+    const groupOne = document.querySelector('.group-one')
+    const groupTwo = document.querySelector('.group-two')
     const leftArrow = document.querySelector('.left-arrow')
     const rightArrow = document.querySelector('.right-arrow')
     const searchHeader = document.querySelector('.header__search')
@@ -155,9 +160,8 @@
     })
     arrows.forEach(arrow => {
       arrow.addEventListener('click', function() {
-        groups.forEach(group => {
-          
-        });
+        console.log('ye')
+        mustWatch.classList.toggle('.is-switch')
       })
     });
   </script>
