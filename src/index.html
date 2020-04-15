@@ -83,30 +83,83 @@
     <a href="index.html" class="info__link">View all</a>
   </div>
   <div class="must-watch__posters">
-    <div class="group-one posters">
-      <a class="poster__link"><img src="assets/poster/the-conjuring.png" alt="The conjuring poster" class="poster"></a>
-      <a class="poster__link"><img src="assets/poster/seven.png" alt="Seven poster" class="poster"></a>
-      <a class="poster__link"><img src="assets/poster/the-shining.png" alt="The shining poster" class="poster"></a>
-      <a class="poster__link"><img src="assets/poster/memories-of-murder.png" alt="Memories of murder poster" class="poster"></a>
-      <a class="poster__link"><img src="assets/poster/veritgo.png" alt="Vertigo poster" class="poster"></a>
-      <a class="poster__link"><img src="assets/poster/alien.png" alt="Alien poster" class="poster"></a>
-      <a class="poster__link"><img src="assets/poster/psycho.png" alt="Psycho poster" class="poster"></a>
+    <div class="group-one posters__group">
+      <img src="assets/poster/the-conjuring.png" alt="The conjuring poster" class="poster">
+      <img src="assets/poster/seven.png" alt="Seven poster" class="poster">
+      <img src="assets/poster/the-shining.png" alt="The shining poster" class="poster">
+      <img src="assets/poster/memories-of-murder.png" alt="Memories of murder poster" class="poster">
+      <img src="assets/poster/veritgo.png" alt="Vertigo poster" class="poster">
+      <img src="assets/poster/alien.png" alt="Alien poster" class="poster">
+      <img src="assets/poster/psycho.png" alt="Psycho poster" class="poster">
+      <img src="assets/poster/get-out.png" alt="Get-out poster" class="poster">
+      <img src="assets/poster/gremlin.png" alt="Gremlin poster" class="poster">
+    </div>
+    <div class="group-two posters__group">
+      <img src="assets/poster/the-conjuring.png" alt="The conjuring poster" class="poster">
+      <img src="assets/poster/seven.png" alt="Seven poster" class="poster">
+      <img src="assets/poster/the-shining.png" alt="The shining poster" class="poster">
+      <img src="assets/poster/memories-of-murder.png" alt="Memories of murder poster" class="poster">
+      <img src="assets/poster/veritgo.png" alt="Vertigo poster" class="poster">
+      <img src="assets/poster/alien.png" alt="Alien poster" class="poster">
+      <img src="assets/poster/psycho.png" alt="Psycho poster" class="poster">
     </div>
   </div>
   <div class="must-watch__arrows">
-  <img src="assets/tool/left-arrow.png" class="left-arrow" alt="left-arrow for seeing another films">
-  <img src="assets/tool/left-arrow.png" class="right-arrow" alt="right arrow for seeing another films">
+  <img src="assets/tool/left-arrow.png" class="left-arrow arrow" alt="left-arrow for seeing another films">
+  <img src="assets/tool/left-arrow.png" class="right-arrow arrow" alt="right arrow for seeing another films">
+  </div>
+</section>
+<section class="thriller">
+  <div class="thriller__info">
+    <p class="info__title">Thriller</p>
+    <a href="index.html" class="info__link">View all</a>
+  </div>
+  <div class="thriller__posters">
+    <div class="group-one posters__group">
+      <img src="assets/poster/the-conjuring.png" alt="The conjuring poster" class="poster">
+      <img src="assets/poster/seven.png" alt="Seven poster" class="poster">
+      <img src="assets/poster/the-shining.png" alt="The shining poster" class="poster">
+      <img src="assets/poster/memories-of-murder.png" alt="Memories of murder poster" class="poster">
+      <img src="assets/poster/veritgo.png" alt="Vertigo poster" class="poster">
+      <img src="assets/poster/alien.png" alt="Alien poster" class="poster">
+      <img src="assets/poster/psycho.png" alt="Psycho poster" class="poster">
+      <img src="assets/poster/get-out.png" alt="Get-out poster" class="poster">
+      <img src="assets/poster/gremlin.png" alt="Gremlin poster" class="poster">
+    </div>
+    <div class="group-two posters__group">
+      <img src="assets/poster/the-conjuring.png" alt="The conjuring poster" class="poster">
+      <img src="assets/poster/seven.png" alt="Seven poster" class="poster">
+      <img src="assets/poster/the-shining.png" alt="The shining poster" class="poster">
+      <img src="assets/poster/memories-of-murder.png" alt="Memories of murder poster" class="poster">
+      <img src="assets/poster/veritgo.png" alt="Vertigo poster" class="poster">
+      <img src="assets/poster/alien.png" alt="Alien poster" class="poster">
+      <img src="assets/poster/psycho.png" alt="Psycho poster" class="poster">
+    </div>
+  </div>
+  <div class="thriller__arrows">
+  <img src="assets/tool/left-arrow.png" class="left-arrow arrow" alt="left-arrow for seeing another films">
+  <img src="assets/tool/left-arrow.png" class="right-arrow arrow" alt="right arrow for seeing another films">
   </div>
 </section>
   <img class="banner" src="assets/tool/seven-banner.png">
   <script>
-    const searchLogo= document.querySelector('.search__logo')
-    const searchBar= document.querySelector('.search__bar')
+    const searchLogo = document.querySelector('.search__logo')
+    const searchBar = document.querySelector('.search__bar')
+    const arrows = document.querySelectorAll('.arrow')
+    const groups = document.querySelectorAll('.group')
+    const leftArrow = document.querySelector('.left-arrow')
+    const rightArrow = document.querySelector('.right-arrow')
     const searchHeader = document.querySelector('.header__search')
     searchLogo.addEventListener('click', function() {
       searchHeader.classList.toggle('is-open')
-    }
-    )
+    })
+    arrows.forEach(arrow => {
+      arrow.addEventListener('click', function() {
+        groups.forEach(group => {
+          
+        });
+      })
+    });
   </script>
 </body>
 </html>

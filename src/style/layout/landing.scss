@@ -12,7 +12,7 @@ body {
       flex-direction: row;
       margin-left:136px;
       font-size:24px;
-      font-family:Poppins;
+      font-family:Poppins-bold;
       font-weight: 300;
       a {
       text-decoration:none;
@@ -25,18 +25,11 @@ body {
       }
       a:first-child{
         margin-left:11px;
-      }
-      a:first-child::before {
-        content:"";
-        position: absolute;
-        width: 3%;
-        height: 20%;
-        bottom:25%;
-        left: 31%;
         border: 1px solid #E94242;
         border-top-color: transparent;
         border-right-color:transparent;
       }
+      
     }
     .header__search {
       margin-left: 231px;
@@ -100,11 +93,8 @@ body {
     }
     .must-watch__arrows {
       position:relative;
-      bottom:21vh;
+      bottom:49vh;
       width:90vw;
-      .left-arrow {
-        transition:all 0.3s
-      }
       .right-arrow {
         position: relative;
         left:100%;
@@ -113,26 +103,99 @@ body {
       .left-arrow:hover {
         background-color:black;
         opacity:0.3;
-        height:100%;
       }
-      .right-arrow:hover {
+      .right-arrow:hover{
         background-color:black;
         opacity:0.3;
-        height:100%;
       }
     }
       
     .must-watch__posters {
       margin-top:59px;
-      display:flex;
-      flex-direction:row;
-      .posters {
+      .posters__group{
+        display:flex;
+        flex-direction: row;
         width:100vw;
+        
+      }
+      .group-one {
+        overflow:hidden;
         .poster {
           margin-left:44px;
           cursor:pointer;
         }
+        .poster:first-child {
+          margin-left:0px;
+        }
+      }
+      .group-two {
+        width:100vw;
+        transform: translateX(-3000px);
 
+      }
+    }
+  }
+  .thriller {
+    position:absolute;
+    margin-top:1050px;
+    width: 100vw;
+    .thriller__info {
+      display:flex; 
+      flex-direction:row;
+      margin-left: 151px;
+      .info__title{
+        color: #F7F7F7;
+        font-size:32px;
+        font-family: Poppins;
+        font-weight: 500;
+      }
+      .info__link{
+        margin-left:18px;
+        align-self: flex-end;
+        color: #D73F3F;
+        font-size: 16px;
+        font-family: Poppins;
+        font-weight: 300;
+      }
+    }
+    .thriller__arrows {
+      position:relative;
+      bottom:49vh;
+      width:90vw;
+      .right-arrow {
+        position: relative;
+        left:100%;
+        transform: rotate(-180deg);
+      }
+      .left-arrow:hover {
+        background-color:black;
+        opacity:0.3;
+      }
+      .right-arrow:hover{
+        background-color:black;
+        opacity:0.3;
+      }
+    }
+      
+    .thriller__posters {
+      margin-top:59px;
+      .posters__group{
+        display:flex;
+        flex-direction: row;
+        width:100vw;
+        
+      }
+      .group-one {
+        overflow:hidden;
+        .poster {
+          margin-left:44px;
+          cursor:pointer;
+        }
+      }
+      .group-two {
+        width:100vw;
+        transform: translateX(-3000px);
+        transition:all 0.5s;
       }
     }
   }
