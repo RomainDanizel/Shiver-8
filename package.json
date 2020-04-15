@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "parcel": "^1.12.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "parcel": "^1.12.4",
     "pug": "^2.0.4",
