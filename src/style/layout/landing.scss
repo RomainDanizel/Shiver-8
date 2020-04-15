@@ -60,6 +60,7 @@ body {
       }
     }
     .header__login {
+      margin-top:30px;
       object-fit:contain;
       display:block;
     }
@@ -97,7 +98,7 @@ body {
       width:90vw;
       .right-arrow {
         position: relative;
-        left:100%;
+        left:92vw;
         transform: rotate(-180deg);
       }
       .left-arrow:hover {
@@ -112,14 +113,15 @@ body {
       
     .must-watch__posters {
       margin-top:59px;
+      transition:all 0.5s;
       .posters__group{
         display:flex;
         flex-direction: row;
-        width:100vw;
-        
+        width:1900px;
       }
       .group-one {
         overflow:hidden;
+        transform: translateX(-100px);
         .poster {
           margin-left:44px;
           cursor:pointer;
@@ -129,9 +131,26 @@ body {
         }
       }
       .group-two {
-        width:100vw;
-        transform: translateX(-3000px);
-
+        width:1900px;
+        transform: translateX(3000px);
+      }
+    }
+    .must-watch__posters.is-switch {
+      transition:all 0.5s;
+      .group-one {
+        width:1900px;
+        transform: translateX(3000px);
+      }
+      .group-two{
+        transform: translateX(-100px);
+        overflow:hidden;
+        .poster {
+          margin-left:44px;
+          cursor:pointer;
+        }
+        .poster:first-child {
+          margin-left:0px;
+        }
       }
     }
   }
@@ -164,7 +183,7 @@ body {
       width:90vw;
       .right-arrow {
         position: relative;
-        left:100%;
+        left:92vw;
         transform: rotate(-180deg);
       }
       .left-arrow:hover {
@@ -182,21 +201,29 @@ body {
       .posters__group{
         display:flex;
         flex-direction: row;
-        width:100vw;
-        
+        width:1900px;
       }
       .group-one {
         overflow:hidden;
+        transform: translateX(-100px);
         .poster {
           margin-left:44px;
           cursor:pointer;
         }
+        .poster:first-child {
+          margin-left:0px;
+        }
       }
       .group-two {
-        width:100vw;
+        width:1900px;
         transform: translateX(-3000px);
-        transition:all 0.5s;
       }
     }
+  }
+  .footer {
+    position:absolute;
+    top:170vh;
+    left:10vw;
+    display:block;
   }
 }
